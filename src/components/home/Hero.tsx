@@ -1,5 +1,6 @@
 import { Container } from "../ui/Container";
 import { Wrench, ShieldCheck, Clock } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -54,8 +55,14 @@ export function Hero() {
             </div>
           </div>
           <div className="relative hidden lg:block">
-            <div className="w-full h-[500px] bg-gradient-to-tr from-primary-800 to-primary-600 rounded-2xl shadow-2xl overflow-hidden relative">
-              <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />
+            <div className="w-full h-[500px] rounded-2xl shadow-2xl overflow-hidden relative border-4 border-primary-800">
+              <Image 
+                src="/images/hero.jpg" 
+                alt="Equipamento de Ar Condicionado Moderno" 
+                fill 
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
